@@ -3,17 +3,14 @@ from PyInstaller.utils.hooks import collect_all
 
 project_root=os.path.abspath(os.path.join(SPECPATH,".."))
 app_script=os.path.join(project_root,"main.py")
-runtime_dir=os.path.join(project_root,"runtime")
 if not os.path.isfile(app_script):
     raise SystemExit("Не найден main.py рядом с папкой installer. Распакуйте весь ZIP и повторите сборку.")
 icon_ico=os.path.join(project_root,"assets","jewelry-ai-search.ico")
 icon_png=os.path.join(project_root,"assets","jewelry-ai-search.png")
 if not os.path.isfile(icon_ico) or not os.path.isfile(icon_png):
     raise SystemExit("Не найдена фирменная иконка Jewelry AI Search в папке assets.")
-if not os.path.isdir(runtime_dir):
-    raise SystemExit("Не найдено зашифрованное ядро Jewelry AI Search в папке runtime.")
 
-datas=[(icon_ico,"assets"),(icon_png,"assets"),(runtime_dir,"runtime")]
+datas=[(icon_ico,"assets"),(icon_png,"assets")]
 binaries=[]
 hiddenimports=[
     "base64", "collections", "contextlib", "ctypes", "datetime", "difflib",

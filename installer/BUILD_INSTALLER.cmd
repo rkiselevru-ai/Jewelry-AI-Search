@@ -4,7 +4,7 @@ chcp 65001 >nul
 cd /d "%~dp0.." || goto :failed
 
 echo.
-echo Jewelry AI Search 0.89.0: preparing a protected Windows installer...
+echo Jewelry AI Search 0.98.3: preparing a free Windows installer...
 echo.
 
 call :find_python
@@ -48,13 +48,13 @@ echo Inno Setup: "%JAI_INNO_COMPILER%"
 echo The first build downloads large PyTorch dependencies and can take some time.
 "%JAI_BUILD_PYTHON%" "%~dp0build_installer.py"
 if errorlevel 1 goto :failed
-if not exist "%CD%\release\Jewelry_AI_Search_Setup_v0.89.0.exe" (
+if not exist "%CD%\release\Jewelry_AI_Search_Setup_v0.98.3.exe" (
   echo The expected Setup.exe was not created.
   goto :failed
 )
 
 echo.
-echo READY: "%CD%\release\Jewelry_AI_Search_Setup_v0.89.0.exe"
+echo READY: "%CD%\release\Jewelry_AI_Search_Setup_v0.98.3.exe"
 echo This EXE is the installer that can be shared.
 explorer.exe "%CD%\release" >nul 2>&1
 pause

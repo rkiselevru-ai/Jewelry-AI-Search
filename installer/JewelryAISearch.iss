@@ -1,5 +1,5 @@
 #define MyAppName "Jewelry AI Search"
-#define MyAppVersion "0.89.0"
+#define MyAppVersion "0.98.3"
 #define MyAppPublisher "Роман Киселёв"
 #define MyAppExeName "JewelryAISearch.exe"
 #ifndef AppDistDir
@@ -18,7 +18,7 @@ PrivilegesRequired=lowest
 ArchitecturesAllowed=x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
 OutputDir=..\release
-OutputBaseFilename=Jewelry_AI_Search_Setup_v0.89.0
+OutputBaseFilename=Jewelry_AI_Search_Setup_v0.98.3
 Compression=lzma2
 SolidCompression=no
 WizardStyle=modern

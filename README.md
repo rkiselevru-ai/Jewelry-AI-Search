@@ -35,7 +35,7 @@ Jewelry AI Search — настольное приложение (Windows/Linux) 
 ```bash
 python -m venv .venv
 .venv\Scripts\activate          # Linux: source .venv/bin/activate
-pip install -r installer/requirements-dev.txt   # без PyInstaller, только рантайм-зависимости
+pip install -r installer/requirements-build.txt   # все зависимости, включая PyInstaller
 python main.py
 ```
 

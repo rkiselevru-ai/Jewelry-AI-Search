@@ -11,7 +11,7 @@ import tempfile
 from pathlib import Path
 
 
-VERSION = "0.89.0"
+VERSION = "0.98.3"
 INSTALLER = Path(__file__).resolve().parent
 PROJECT = INSTALLER.parent
 ENVIRONMENT = PROJECT / ".build-venv"
@@ -35,12 +35,8 @@ def main() -> int:
     if sys.version_info[:2] != (3, 11) or struct.calcsize("P") != 8:
         raise SystemExit("Для сборки нужен Python 3.11 x64.")
     source = (PROJECT / "main.py").read_text(encoding="utf-8")
-    if f'BASE_VERSION = "{VERSION}"' not in source:
+    if f'APP_VERSION = "{VERSION}"' not in source:
         raise SystemExit("Версии приложения и установщика не совпадают.")
-    if not (PROJECT / "runtime/jewelry_ai_core.jaic").is_file():
-        raise SystemExit("Не найдено зашифрованное ядро Windows-программы.")
-    if not (PROJECT / "runtime/jewelry_ai_core.json").is_file():
-        raise SystemExit("Не найден паспорт зашифрованного ядра Windows-программы.")
     for directory in (RELEASE, DIST, WORK):
         directory.mkdir(parents=True, exist_ok=True)
     if not BUILD_PYTHON.is_file():

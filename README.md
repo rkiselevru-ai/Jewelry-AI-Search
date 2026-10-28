@@ -81,6 +81,10 @@ BUILD_INSTALLER.cmd
 
 Сборка использует PyInstaller + Inno Setup (см. `installer/JewelryAISearch.spec` и `installer/JewelryAISearch.iss`).
 
+## 💬 Обратная связь
+
+Поставили программу? Расскажите, как она у вас работает — что понравилось и чего не хватает: [обсуждение отзывов](../../discussions). Баги и вопросы — в [Issues](../../issues).
+
 ---
 
 ## Лицензия

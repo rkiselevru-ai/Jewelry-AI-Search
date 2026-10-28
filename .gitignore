@@ -8,6 +8,8 @@ venv/
 # Build artifacts
 build/
 dist/
+.build-venv/
+release/
 *.spec.bak
 ffmpeg.exe
 ffprobe.exe

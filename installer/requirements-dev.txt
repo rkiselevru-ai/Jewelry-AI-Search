@@ -1,0 +1,10 @@
+numpy>=1.26,<3
+Pillow>=10,<13
+zstandard>=0.22,<1
+torch>=2.3
+torchvision>=0.18
+open_clip_torch>=2.26
+transformers>=4.40,<5
+sentencepiece>=0.2
+rhino3dm>=8.32,<9
+PyInstaller>=6.10,<7
